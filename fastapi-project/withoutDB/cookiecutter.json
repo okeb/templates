@@ -1,0 +1,40 @@
+{
+    "full_name": "Oliver KEB",
+    "email": "oliver.keb@icloud.com",
+    "project_name": "Python Boilerplate",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
+    "version": "0.1.0",
+    "python_version": ["^3.12.1", "^3.10.9", "^3.9"],
+    "_db": false,
+    "ruff": true,
+    "black": true,
+    "mypy": true,
+    "open_source_license": ["MIT", "BSD", "ISCL", "Apache Software License 2.0", "Not open source"],
+    "prod_mode": false,
+    "__prompts__": {
+        "full_name": "Author full name",
+        "email": "Author email",
+        "project_name": "Select your project name",
+        "version": "choice the version of the project",
+        "short_description": "Short description",
+        "ruff": "Do you want to use Ruff linter ?",
+        "black": "Do you want to use Black linter ?",
+        "mypy": "Do you want to use MyPy linter ?",
+        "python_version": {
+            "__prompt__": "Which version of python do you want to use ?",
+            "3.12.1": "3.12.1",
+            "^3.10.9": "3.10.9", 
+            "^3.9": "3.9"
+        },
+        "open_source_license": {
+            "__prompt__": "Which linting tool do you want to use?",
+            "MIT": "The MIT License is a permissive open-source license that allows users to freely use, modify, and distribute software with minimal restrictions, making it popular for its simplicity and compatibility with other licenses.",
+            "BSD": "The BSD License is a permissive free software license that imposes minimal restrictions on the use and distribution of covered software, allowing for commercial use and incorporation into proprietary products while requiring retention of copyright notices.",
+            "ISCL": "The ISC License is a permissive open-source license that allows users to use, copy, modify, and distribute software for any purpose with or without fee, while requiring the inclusion of copyright and permission notices, disclaiming all warranties, and limiting liability.",
+            "Apache Software License 2.0": "The Apache License 2.0 is a permissive open-source license that enables free use, modification, and distribution of software with minimal restrictions, allowing for commercial utilization and integration into proprietary products while requiring attribution.",
+            "Not open source": "Not open source software/application"
+        },
+        "prod_mode": "Do you want to push in your project to the production ?"
+    }
+}

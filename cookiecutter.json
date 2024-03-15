@@ -1,0 +1,14 @@
+{
+    "templates": {
+        "simple-python-project": {
+            "path": "./simple-python-project/",
+            "title": "Simple Python Project",
+            "description": ""
+        },
+        "fastapi-project": {
+            "path": "./fastapi-project/",
+            "title": "Fast API Project",
+            "description": ""
+        }
+    }
+}

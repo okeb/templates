@@ -1,0 +1,14 @@
+{
+    "templates": {
+        "with-database": {
+            "path": "./withDB//",
+            "title": "Fast API Project with DB configuration",
+            "description": "mongodb/supabase/etc."
+        },
+        "without-database": {
+            "path": "./withoutDB//",
+            "title": "Simple API Project",
+            "description": "with no DB configuration"
+        }
+    }
+}

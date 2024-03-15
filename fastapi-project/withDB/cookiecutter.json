@@ -1,0 +1,14 @@
+{
+    "templates": {
+        "with-supabase": {
+            "path": "./supabase/",
+            "title": "Fast API Project",
+            "description": "with supabase configuration"
+        },
+        "fastapi-project": {
+            "path": "./mongodb/",
+            "title": "Fast API Project",
+            "description": "with mongoDB configuration"
+        }
+    }
+}

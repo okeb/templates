@@ -1,0 +1,86 @@
+[tool.poetry]
+name = "{{ cookiecutter.project_name }}"
+version = "{{ cookiecutter.version }}"
+description = "{{ cookiecutter.short_description }}"
+authors = ["{{ cookiecutter.full_name }} <{{ cookiecutter.email }}>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^{{ cookiecutter.python_version}}"
+fastapi = "^0.110.0"
+uvicorn = {extras = ["standard"], version = "^0.27.1"}
+pydantic-settings = "^2.2.0"
+slowapi = "^0.1.9"
+
+motor = "^3.3.2"
+
+{% if cookiecutter.prod_mode %}
+[tool.poetry.group.prod.dependencies]
+gunicorn = "^21.2.0"
+redis = "^5.0.1"
+motor = "^3.3.2"
+{% endif %}
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.2"
+coverage = "^7.4.2"
+pytest-httpx = "^0.30.0"
+pytest-asyncio = "^0.23.5"
+{% if cookiecutter.mypy %}
+mypy = "^1.7.0"
+{% endif %}
+{% if cookiecutter.ruff %}
+ruff = "^0.1.6"
+{% endif %}
+{% if cookiecutter.black %}
+black = "^23.11.0"
+{% endif %}
+{% if cookiecutter.db == "mongodb" %}
+motor-types = "^1.0.0b4"
+mongomock-motor = "^0.0.27"
+pytest-httpx = "^0.30.0"
+pytest-asyncio = "^0.23.5"
+{% endif %}
+
+
+{% if cookiecutter.black %}
+[tool.black]
+line-length = 88
+{% endif %}
+
+{% if cookiecutter.ruff %}
+[tool.ruff]
+select = ["E", "F", "I"]
+fixable = ["ALL"]
+exclude = [".git", ".mypy_cache", ".ruff_cache"]
+line-length = 88
+{% endif %}
+
+{% if cookiecutter.mypy %}
+[tool.mypy]
+disallow_any_generics = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+strict_equality = true
+disallow_untyped_decorators = false
+ignore_missing_imports = true
+implicit_reexport = true
+plugins = "pydantic.mypy"
+
+[tool.pydantic-mypy]
+init_forbid_extra = true
+init_typed = true
+warn_required_dynamic_aliases = true
+warn_untyped_fields = true
+{% endif %}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
