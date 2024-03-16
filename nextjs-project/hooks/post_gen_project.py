@@ -10,5 +10,13 @@ if __name__ == "__main__":
         + "PNPM: Install dependencies."
         + "\33[0m"
     )
-    subprocess.run(["cd", "{{cookiecutter.project_slug}}"], check=True)
+    try:
+        subprocess.run(["cd", "{{cookiecutter.project_slug}}"], check=True)
+    except Exception:
+        print(
+            "\33[33m"
+            + "ERROR: can go into the {{cookiecutter.project_slug}} folder"
+            + "\33[0m"
+        )
+    
     subprocess.run(["pnpm", "install"], check=True)

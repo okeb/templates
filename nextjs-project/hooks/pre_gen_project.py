@@ -24,10 +24,4 @@ if __name__ == "__main__":
         # print("To install p execute:")
         # print("curl -sSL https://install.python-poetry.org | python3 -")
         sys.exit(1)
-    else:
-        print(
-            "\33[93m"
-            + "PNPM: Update pnpm."
-            + "\33[0m"
-        )
-        subprocess.run(["sudo", "pnpm", "install", "-g", "pnpm"], check=True)
+
