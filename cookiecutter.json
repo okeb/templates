@@ -9,6 +9,11 @@
             "path": "./fastapi-project/",
             "title": "Fast API Project",
             "description": ""
+        },
+        "nextjs-project": {
+            "path": "./nextjs-project/",
+            "title": "NextJS Project",
+            "description": ""
         }
     }
 }

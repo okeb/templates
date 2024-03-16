@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Custom Components */
+@import "../base/atoms/button";
+@import "../base/atoms/input";
+@import "../base/atoms/body";
+@import "../base/atoms/h1";
+@import "../base/atoms/avatar";
+
+@import "../base/molecules/accordion";
+
+
+.rainbowBorder {
+    border-radius: 9999px;
+    background: linear-gradient(90deg,#02fcef70,#ffb52b70 50%,#a02bfe70);
+    height: 32px;
+    line-height: 0;
+    transition: transform .2s ease-in-out;
+    transform-origin: 0 100%;
+}
+/* Reset CSS */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  // background-color: #FF8ACD;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+input, textarea, select, a { 
+  outline: none; 
+}
+input:focus {
+    outline:none;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
