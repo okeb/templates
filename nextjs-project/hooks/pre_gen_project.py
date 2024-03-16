@@ -37,4 +37,5 @@ if __name__ == "__main__":
             + "PNPM: Install dependencies."
             + "\33[0m"
         )
+        subprocess.run(["cd", "{{cookiecutter.project_slug}}"], check=True)
         subprocess.run(["pnpm", "install"], check=True)
