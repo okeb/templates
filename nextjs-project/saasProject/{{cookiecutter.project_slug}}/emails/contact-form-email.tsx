@@ -53,7 +53,7 @@ export const ContactFromEmail = ({
           <Section>
             <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" viewBox="0 0 16 16" className="inline-flex mr-2 -mt-2 mb-5"><g fill="#2191fb"><path d="M5 13h6v-3h-1v.5a.5.5 0 0 1-1 0V10H5z"></path><path d="M6 2v.341C3.67 3.165 2 5.388 2 8v1.191l-1.17.585A1.5 1.5 0 0 0 0 11.118V13.5A1.5 1.5 0 0 0 1.5 15h1c.456.607 1.182 1 2 1h7c.818 0 1.544-.393 2-1h1a1.5 1.5 0 0 0 1.5-1.5v-2.382a1.5 1.5 0 0 0-.83-1.342L14 9.191V8a6 6 0 0 0-4-5.659V2a2 2 0 1 0-4 0m2-1a1 1 0 0 1 1 1v.083a6 6 0 0 0-2 0V2a1 1 0 0 1 1-1m0 3a4 4 0 0 1 3.96 3.43a.5.5 0 1 1-.99.14a3 3 0 0 0-5.94 0a.5.5 0 1 1-.99-.14A4 4 0 0 1 8 4M4.5 9h7a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5"></path></g></svg>
             {/* <Img
-              src={`${baseUrl}/static/airbnb-logo.png`}
+              src={`${baseUrl}/static/{{ cookiecutter.project_slug }}-logo.png`}
               width="96"
               height="30"
               alt="Airbnb"
@@ -68,18 +68,22 @@ export const ContactFromEmail = ({
               style={userImage}
             />
           </Section> */}
+          {% raw %}
           <Section style={{ paddingBottom: "20px" }}>
+          {% endraw %}
             <Row>
               <Text style={heading}>Ici, ce que {username} a écrit</Text>
               <Text style={review}>{message}</Text>
               <Text style={paragraph}>
                 Le message a été envoyé le {dateTimeString}.
               </Text>
+              {% raw %}
               <Text style={{ ...paragraph, paddingBottom: "16px" }}>
+              {% endraw %}
                 Pour repondre à ce message, cliquez sur le bouton ci-dessous:
               </Text>
 
-              <Button style={button} href="http//localhost:3000/contact">
+              <Button style={button} href="http//{{ cookiecutter.MON_SITE }}/contact">
                 Repondre au message
               </Button>
             </Row>
@@ -89,30 +93,12 @@ export const ContactFromEmail = ({
 
           <Section>
             <Row>
-              {/* <Text style={{ ...paragraph, fontWeight: "700" }}>
-                Common questions
-              </Text>
-              <Text>
-                <Link href="https://airbnb.com/help/article/13" style={link}>
-                  How do reviews work?
-                </Link>
-              </Text>
-              <Text>
-                <Link href="https://airbnb.com/help/article/1257" style={link}>
-                  How do star ratings work?
-                </Link>
-              </Text>
-              <Text>
-                <Link href="https://airbnb.com/help/article/995" style={link}>
-                  Can I leave a review after 14 days?
-                </Link>
-              </Text> */}
               <Hr style={hr} />
               <Text style={footer}>
-                Airbnb, Inc., 888 Brannan St, San Francisco, CA 94103
+                {{ cookiecutter.NOM_DE_LA_SOCIETE }}, Inc., {{ cookiecutter.ADRESSE_DU_SIEGE_SOCIAL }}
               </Text>
               <Link href="http://localhost:3000" style={reportLink}>
-                www.lepourvoyeur.org
+                {{ cookiecutter.MON_SITE }}
               </Link>
             </Row>
           </Section>
@@ -122,14 +108,6 @@ export const ContactFromEmail = ({
   );
 };
 
-// ContactFromEmail.PreviewProps = {
-//   username: "Alex",
-//   authorImage: `${baseUrl}/static/airbnb-review-user.jpg`,
-//   message: `“Alan was a great guest! Easy communication, the apartment was left
-//     in great condition, very polite, and respectful of all house rules.
-//     He’s welcome back anytime and would easily recommend him to any
-//     host!”`,
-// } as AirbnbReviewEmailProps;
 
 export default ContactFromEmail;
 

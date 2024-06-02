@@ -22,6 +22,7 @@ export default async function Image() {
     (
       // ImageResponse JSX element
       <div
+      {% raw %}
         style={{
           fontSize: 128,
           background: 'white',
@@ -34,6 +35,7 @@ export default async function Image() {
           alignItems: 'center',
           justifyContent: 'center',
         }}
+        {% endraw %}
       >
         The Human Link
       </div>

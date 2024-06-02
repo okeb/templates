@@ -11,7 +11,7 @@ const fontSans = FontSans({
 
 export const metadata: Metadata = {
   title: "{{ cookiecutter.MON_SITE }}",
-  description: "The new IA assistance which help you to find the best partner",
+  description: "{{ cookiecutter.short_description }}",
 };
 
 export default function RootLayout({

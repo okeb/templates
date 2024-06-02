@@ -1,9 +1,9 @@
 import { SiteConfig } from "types"
 
 export const siteConfig: SiteConfig = {
-  name: "Popcorn",
+  name: "{{ cookiecutter.project_name}}",
   description:
-    "An open source application built using the new router, server components and everything new in Next.js 14.",
+    "{{ cookiecutter.short_description }}",
   url: "",
   ogImage: "https://tx.shadcn.com/og.jpg",
   links: {

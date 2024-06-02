@@ -12,6 +12,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
     <Sonner
       theme={theme as ToasterProps["theme"]}
       className="toaster group"
+      {% raw %}
       toastOptions={{
         classNames: {
           toast:
@@ -23,6 +24,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
             "group-[.toast]:bg-zinc-100 group-[.toast]:text-zinc-500 dark:group-[.toast]:bg-zinc-800 dark:group-[.toast]:text-zinc-400",
         },
       }}
+      {% endraw %}
       {...props}
     />
   )

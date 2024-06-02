@@ -10,7 +10,7 @@ const interRegular = fetch(
 const interBold = fetch(
   new URL("../../fonts/CalSans_SemiBold.woff", import.meta.url)
 ).then((res) => res.arrayBuffer())
-
+{% raw %}
 export default async function Image(req: Request) {
   try {
     const fontRegular = await interRegular
@@ -145,3 +145,4 @@ export default async function Image(req: Request) {
     })
   }
 }
+{% endraw %}

@@ -48,7 +48,7 @@ Les offres de Produits s'entendent dans la limite des stocks disponibles, tels q
 
 Ces CGV sont accessibles à tout moment sur le site {{ cookiecutter.MON_SITE }} et prévaudront sur toute autre document.
 
-Le Client déclare avoir pris connaissance des présentes CGV et les avoir acceptées en cochant la case prévue à cet effet avant la mise en œuvre de la procédure de commande en ligne du site {{ MON_SITE}}.
+Le Client déclare avoir pris connaissance des présentes CGV et les avoir acceptées en cochant la case prévue à cet effet avant la mise en œuvre de la procédure de commande en ligne du site {{ cookiecutter.MON_SITE }}.
 
 Sauf preuve contraire, les données enregistrées dans le système informatique du Vendeur constituent la preuve de l'ensemble des transactions conclues avec le Client.
 
@@ -69,9 +69,9 @@ Email : {{ cookiecutter.ADRESSE_EMAIL}}
 
 Téléphone : {{ cookiecutter.NUMERO_DE_TELEPHONE }}
 
-{{ if cookiecutter.NUMERO_TVA}}
+{%- if cookiecutter.NUMERO_TVA -%}
 Numéro de TVA Intracommunautaire {{ cookiecutter.NUMERO_TVA }}
-{{ endif }}
+{% endif %}
 
 
 ## Article 2 - Prix
@@ -113,7 +113,7 @@ Toute annulation de la commande par le Client après son acceptation par le Vend
 
 <div class="page-break"></div>
 
-{{ if cookiecutter.HAS_CUSTOMER_SPACE }}
+{%- if cookiecutter.HAS_CUSTOMER_SPACE -%}
 ## Article 3bis - Espace Client / Compte
 
 Afin de passer commande, le Client est invité à créer un compte (espace personnel).
@@ -133,7 +133,7 @@ Toute suppression de compte, quel qu'en soit le motif, engendre la suppression p
 Tout événement dû à un cas de force majeure ayant pour conséquence un dysfonctionnement du site ou serveur et sous réserve de toute interruption ou modification en cas de maintenance, n'engage pas la responsabilité du Vendeur.
 
 La création du compte entraine l'acceptation des présentes conditions générales de vente.
-{{ endif }}
+{% endif %}
 
 
 ## Article 4 - Condition de Paiement
@@ -336,9 +336,9 @@ En l'espèce, le médiateur désigné est
 {{ cookiecutter.NOM_DU_SERVICE_DE_MEDIATION }}
 
 {{ cookiecutter.ADRESSE_POSTALE_DU_SERVICE_DE_MEDIATION }}
-{{ if cookiecutter.SITE_INTERNET_DU_SERVICE_DE_MEDIATION }}
+{%- if cookiecutter.SITE_INTERNET_DU_SERVICE_DE_MEDIATION -%}
 {{ cookiecutter.SITE_INTERNET_DU_SERVICE_DE_MEDIATION }}
-{{ endif}}
+{% endif %}
 E-mail : {{ cookiecutter.ADRESSE_EMAIL_DU_SERVICE_DE_MEDIATION }}.
 
 Le Client est également informé qu'il peut, également recourir à la plateforme de Règlement en Ligne des
