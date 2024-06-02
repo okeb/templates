@@ -1,0 +1,11 @@
+@layer base{
+  .m-accordion {
+    @apply  backdrop-blur-sm border dark:border-slate-500/15 border-slate-500/10;
+    &__question {
+      @apply text-base font-semibold;
+    }
+    &__response {
+      @apply text-base dark:text-white -mt-[0.67rem];
+    }
+  }
+}

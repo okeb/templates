@@ -1,0 +1,28 @@
+@layer base{
+  .a-button {
+    @apply relative md:w-fit;
+    button, input, select, textarea{
+      @apply cursor-default backdrop-blur-xl bg-gray-900/10 border-gray-900/5 dark:bg-gray-900 border dark:border-gray-900 text-gray-900  dark:text-gray-300 rounded-md text-sm px-4 py-2 transition-all hover:bg-gray-900/15 dark:hover:bg-gray-800/70 dark:hover:text-white select-none w-full;
+    }
+    &.-center, &.-middle {
+      @apply mx-auto w-fit;
+    }
+    &.-right {
+      @apply mr-0 ml-auto w-fit;
+    }
+    &.-left {
+      @apply ml-0 mr-auto w-fit;
+    }
+    &.-full {
+      @apply mx-0 w-full;
+    }
+    
+
+    &> input[aria-label="Checkbox"][type="checkbox"]:checked {
+    }
+
+    &> input[aria-label="Radio"][type="radio"]:checked {
+    }
+
+  }
+}

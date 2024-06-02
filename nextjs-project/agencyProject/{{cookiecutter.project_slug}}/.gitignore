@@ -1,0 +1,10 @@
+.env
+next-env.d.ts
+.vercel
+.contentlayer
+.next
+node_modules
+dist
+build
+certificates
+.env.local

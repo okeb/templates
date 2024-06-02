@@ -1,0 +1,6 @@
+@layer base{
+  .a-h1 {
+    @apply md:text-6xl text-5xl bg-clip-text text-transparent bg-gradient-to-br dark:from-white/80 from-foreground/80 dark:via-white via-foreground
+      dark:to-white/0 to-foreground/0 font-sans font-bold tracking-tight;
+  }
+}
