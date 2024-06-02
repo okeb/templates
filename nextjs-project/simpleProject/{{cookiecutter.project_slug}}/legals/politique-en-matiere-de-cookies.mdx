@@ -1,0 +1,84 @@
+---
+dest: ./public/legals/politique-en-matieres-de-cookies.pdf
+css: |-
+  .page-break { page-break-after: always; }
+stylesheet:
+    - ./app/styles/base/pdf/style_pdf.css
+body_class: markdown-body
+pdf_options:
+  format: a4
+  margin: 40mm 20mm
+  printBackground: true
+  headerTemplate: |-
+    <style>
+      section {
+        margin: 0 auto;
+        font-family: system-ui;
+        font-size: 10px;
+      }
+    </style>
+    <section>
+      <span class="title"></span>
+    </section>
+  footerTemplate: |-
+    <section>
+      <div>
+        Page <span class="pageNumber"></span>
+        sur <span class="totalPages"></span>
+      </div>
+    </section>
+---
+
+<h1 style="text-align:center; font-size:2rem; font-weight:600">Politique en matière de cookies</h1>
+<p style="text-align:center; margin-top:-10px; margin-bottom:5rem"><span style="font-weight:600">Dernières mise à jour :</span> {{ cookiecutter.DATE_DE_MISE_A_JOUR_DE_LA_POLITIQUE_DE_COOKiES }}</p>
+
+La présente “cookies policy” a pour objectif de vous informer concernant l’utilisation de cookies par {{ cookiecutter.MON_SITE }}. Lors de vos visites sur nos sites web, il vous sera demandé d’expressément donner votre accord quant aux usages de cookies décrits ci-après.
+
+Si vous ne souhaitez pas autoriser l’utilisation de cookies, vous devez modifier les paramètres de votre navigateur. Vous trouverez d’autres informations à ce sujet au point "3. Gestion des cookies".
+
+La présente “cookies policy” s’applique aux sites web de {{ cookiecutter.MON_SITE }}. Ceux-ci sont gérés par {{ cookiecutter.MON_SITE }} via {{ cookiecutter.SERVICE_DE_GESTION_DES_COOKIES }}, dénommée ci-après "{{ cookiecutter.MON_SITE }}", qui est une société dont le siège est établi au {{ ADRESSE_DU_SIEGE_SOCIAL }}.
+
+Date d’entrée en vigueur : {{ cookiecutter.DATE_D_ENTREE_EN_VIGUEUR }}
+
+
+## Article 1 - Définition des Cookies
+
+Les cookies sont de petits fichiers d’information que le serveur d’un site web enregistre de manière temporaire sur le disque dur de votre ordinateur ou appareil par l’intermédiaire de votre navigateur. Ils peuvent également être installés par des partenaires du gestionnaire du Site (dans ce cas-ci {{ cookiecutter.MON_SITE }}), à la demande de ce dernier.
+
+Les cookies remplissent diverses fonctions : faire en sorte que le site web tienne compte des préférences du visiteur lors de ses différentes démarches ou prochaines visites, collecter des données statistiques, adapter le contenu et/ou la publicité des sites en fonction de l’utilisateur, etc.
+
+
+## Article 2 - Utilisation des Cookies sur la Plateforme
+
+Différents types de cookies sont utilisés sur les sites de {{ cookiecutter.MON_SITE }} :
+
+Les **cookies techniques** permettent :
+
+- de personnaliser les services en mémorisant vos préférences (choix d’une langue, d’une devise etc…) ;
+- d’éviter que vous ne répétiez vos choix lors de chaque visite sur le site ;
+- de collecter les informations communiquées dans les formulaires en ligne ;
+- d’établir des statistiques ;
+- d’analyser l’utilisation du site
+
+Les **cookies de suivi** permettent :
+
+- d’éviter que vous ne soyez confronté, de manière répétitive, aux mêmes annonces publicitaires
+- de mesurer l’efficacité de nos différentes actions de marketing
+
+Les **cookies de partenaires** permettent :
+
+- d’améliorer le contenu et le fonctionnement de nos sites web
+- d’effectuer le suivi de nos bannières {{ cookiecutter.MON_SITE }} présentes sur d’autres sites et de les optimiser
+
+
+## Article 3 - Gestion des Cookies
+
+Tous les navigateurs internet permettent de gérer les cookies qui sont installés sur votre ordinateur ou sur votre appareil. Vous pouvez bloquer ou autoriser ces cookies ou indiquer les sites spécifiques dont vous acceptez les cookies. Les navigateurs équipant les appareils mobiles proposent généralement moins d’options de personnalisation que les ordinateurs.
+
+Pour plus d’informations à ce sujet, vous pouvez consulter les paramètres de configuration de votre navigateur internet. Cela peut néanmoins avoir un impact sur l'utilisation des sites ou des applications mises à disposition par {{ cookiecutter.MON_SITE }}.
+
+Remarque : si vous procédez à des modifications, sachez que celles-ci n’ont aucun effet sur les cookies qui ont éventuellement été installés sur votre ordinateur avant ces modifications. Vous devrez donc également les supprimer spécifiquement si vous souhaitez désactiver ces cookies.
+
+## Article 4 - Modification
+
+{{ cookiecutter.MON_SITE }} se réserve le droit de modifier ou d’actualiser la présente “cookies policy” à tout moment. Vous devez donc tenir compte de la version la plus récente de ce document telle que reprise sur les sites web de {{ cookiecutter.MON_SITE }}, accessible en suivant le lien “cookies policy” au bas de chaque page. Toute modification à la présente “cookies policy” entre en vigueur dès son affichage sur le site.
