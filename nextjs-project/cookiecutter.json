@@ -9,7 +9,7 @@
             "path": "./agencyProject//",
             "title": "The Nextjs project to create an agency website  with  blog",
             "description": "NextJs, ContentLayer, shadcn, tailwindcss, Resend."
-        }
+        },
         "saas-project": {
             "path": "./saasProject//",
             "title": "The Saas Nextjs project",
