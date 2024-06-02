@@ -7,7 +7,7 @@
 		"version": "0.1.0",
 		"license": ["MIT", "BSD", "ISCL", "Apache Software License 2.0", "Not open source"],
 
-		"resend_api_key" : ''
+		"RESEND_API_KEY" : "L70XRSswzI",
 
 		"NOM_DE_LA_SOCIETE":"Pepa",
 		"FORME_SOCIALE": ["SASU", "EURL", "SA", "SAS", "SARL"],
@@ -88,6 +88,7 @@
 				"NUMERO_TVA":"Le numéro de TVA de la société",
 				"NUMERO_RCS":"Le numéro de RCS de la société",
 				"MON_SITE":"Nom du site web de la société",
+				"RESEND_API_KEY":"l'API Key de Resend pour l'envoie de mail de la société",
 
 				"DATE_D_ENTREE_EN_VIGUEUR_DES_CG": "quelle est la date d'entrée en vigueur des CG (JJ/MM/AAAA) ?",
 				"NOMS_ET_PRENOMS_DE_LA_PERSONNE_EN_CHARGE":"Noms et prénoms de la personnes qui est responsables de la rédaction des et de la publication",
